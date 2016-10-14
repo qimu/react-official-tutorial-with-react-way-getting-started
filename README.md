@@ -5,9 +5,10 @@ Refactored the [React.js official tutorial code]( https://facebook.github.io/rea
 
 Modifications:
 
+* just keep the node.js server
 * simplified app.js
 * not using remarkable
-* use lowdb
+* use lowdb in server
 
 ## How to start
 

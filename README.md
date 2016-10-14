@@ -2,7 +2,7 @@
 *Work in Progress*
 
 
-Refactored the [react official tutorial code]( https://facebook.github.io/react/docs/tutorial.html) with the [The React Way: Getting Started boilerplate]( https://github.com/RisingStack/react-way-getting-started) to use webpack and ES6.
+Refactored the [React.js official tutorial code]( https://facebook.github.io/react/docs/tutorial.html) with the [The React Way: Getting Started boilerplate]( https://github.com/RisingStack/react-way-getting-started) to use webpack and ES6.
 
 Modifications:
 

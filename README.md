@@ -8,6 +8,7 @@ Modifications:
 
 * simplified app.js
 * not using remarkable
+* use lowdb
 
 ## How to start
 

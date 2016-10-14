@@ -2,7 +2,13 @@
 Work in Progress
 
 
-Refactored the react official tutorial: https://facebook.github.io/react/docs/tutorial.html with the The React Way: Getting Started boilerplate: https://github.com/RisingStack/react-way-getting-started
+Refactored the react official tutorial: https://facebook.github.io/react/docs/tutorial.html with the The React Way: Getting Started boilerplate: https://github.com/RisingStack/react-way-getting-started for that it uses webpack and es6.
+
+Modifications:
+
+* simplified app.js
+* not using remarkable
+
 
 ## How to start
 

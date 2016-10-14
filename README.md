@@ -1,4 +1,7 @@
 # React Official Tutorial with The React Way: Getting Started
+Work in Progress
+
+
 Refactored the react official tutorial: https://facebook.github.io/react/docs/tutorial.html with the The React Way: Getting Started boilerplate: https://github.com/RisingStack/react-way-getting-started
 
 ## How to start

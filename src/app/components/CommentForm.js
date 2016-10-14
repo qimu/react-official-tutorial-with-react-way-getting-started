@@ -9,7 +9,7 @@ class CommentForm extends React.Component {
 		this.setState({author: e.target.value});
 	}
 	handleTextChange(e) {
-		this.setState({text: e.target.value})
+		this.setState({text: e.target.value});
 	}
 	handleSubmit(e) {
 		e.preventDefault();
@@ -23,18 +23,18 @@ class CommentForm extends React.Component {
 	}
 	render() {
 		return (
-				<form className="commentForm" onSubmit={this.handleSubmit}>
+				<form className="commentForm" onSubmit={this.handleSubmit.bind(this)}>
 					<input
 							type="text"
 							placeholder="Your name"
 					    value={this.state.author}
-					    onChange={this.handleAuthorChange}
+					    onChange={this.handleAuthorChange.bind(this)}
 					/>
 					<input
 							type="text"
 							placeholder="Say something..."
 					    value={this.state.text}
-							onChange={this.handleTextChange}
+							onChange={this.handleTextChange.bind(this)}
 					/>
 					<input type="submit" value="Post" />
 				</form>

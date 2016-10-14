@@ -16,4 +16,6 @@ Check your http://localhost:3000/ or  `open http://localhost:3000/`
 Run:  
 `npm run webpack-watch`
 
-## Preview
+## How to start server
+Run:  
+`npm run start`

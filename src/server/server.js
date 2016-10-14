@@ -1,6 +1,18 @@
 import path from 'path';
 import express from 'express';
 var fs = require('fs');
+import low from 'lowdb';
+import fileAsync from 'lowdb/lib/file-async';
+
+const db = low('db.json', {
+  storage: fileAsync
+});
+
+db.defaults({comments: []})
+  .value();
+
+const comments = db.get('comments');
+
 
 var bodyParser = require('body-parser');
 
@@ -33,13 +45,15 @@ app.use(function(req, res, next) {
 });
 
 app.get('/api/comments', function(req, res) {
-  fs.readFile(COMMENTS_FILE, function(err, data) {
-    if (err) {
-      console.error(err);
-      process.exit(1);
-    }
-    res.json(JSON.parse(data));
-  });
+  // fs.readFile(COMMENTS_FILE, function(err, data) {
+  //   if (err) {
+  //     console.error(err);
+  //     process.exit(1);
+  //   }
+  //   res.json(JSON.parse(data));
+  // });
+  const commentsNow = comments.value();
+  res.json(commentsNow);
 });
 
 app.post('/api/comments', function(req, res) {

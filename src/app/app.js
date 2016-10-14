@@ -7,7 +7,7 @@ import CommentBox from './components/CommentBox';
 class App {
 
 	render(domElement) {
-		var reactElement = <CommentBox />;
+		var reactElement = <CommentBox url="/api/comments"/>;
 
 		// render to DOM
 		if (domElement) {

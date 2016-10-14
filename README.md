@@ -8,7 +8,6 @@ Modifications:
 
 * simplified app.js
 * not using remarkable
-* not polling
 
 ## How to start
 

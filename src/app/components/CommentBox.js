@@ -12,7 +12,7 @@ class CommentBox extends React.Component {
 	}
 	loadCommentsFromServer() {
 		$.ajax({
-			url: '/api/comments',
+			url: this.props.url,
 			dataType: 'json',
 			cache: false,
 			success: function(data) {
@@ -28,16 +28,13 @@ class CommentBox extends React.Component {
 		setInterval(this.loadCommentsFromServer.bind(this), 1000);
 	}
 	handleCommentSubmit(comment) {
-		console.log(comment);
-		var comments = this.state.data;
-		var newComments = comments.concat([comment]);
 		$.ajax({
-			url: '/api/comments',
+			url: this.props.url,
 			dataType: 'json',
 			type: 'POST',
 			data: comment,
 			success: function(data) {
-				this.setState({data: newComments});
+				this.setState({data: data});
 			}.bind(this),
 			error: function(xhr, status, err) {
 				console.error(this.props.url, status, err.toString());
@@ -55,5 +52,10 @@ class CommentBox extends React.Component {
 	}
 }
 
+
+// Prop types validation
+CommentBox.propTypes = {
+	url: React.PropTypes.string.isRequired
+};
 
 export default CommentBox;
